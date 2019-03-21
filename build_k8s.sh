@@ -110,11 +110,4 @@ kops create cluster \
 
 [ ! $? -eq 0 ] && help_menu
 
-echo "Generating Ansible Inventory"
-echo "To use Ansible, use the following structure:"
-echo "ansible -m ping -i inventory.ini -u admin"
-
-echo "#Ansible Inventory File" > inventory.ini
-echo "[kubernetes]" >> inventory.ini
-echo "api.$KOPS_CLUSTER_NAME.$KOPS_DNS_ZONE" >> inventory.ini;
 
