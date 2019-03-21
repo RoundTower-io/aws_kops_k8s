@@ -55,5 +55,6 @@ done
 [ -z ${KOPS_DNS_ZONE} ] && echo "DNS Zone required!" && help_menu
 [ -z ${KOPS_STATE_STORE} ] && echo "Kops state store required!" && help_menu
 
-kops delete cluster ${KOPS_CLUSTER_NAME}.${KOPS_DNS_ZONE} --state=$KOPS_STATE_STORE --yes;
+kops delete cluster ${KOPS_CLUSTER_NAME}.${KOPS_DNS_ZONE} --state=${KOPS_STATE_STORE} --yes;
+
 
