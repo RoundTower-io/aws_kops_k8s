@@ -2,19 +2,21 @@
 
 KOPS_STATE_STORE=""
 KOPS_DNS_ZONE=""
-KOPS_CLUSTER_NAME="tennisk8s"
+KOPS_CLUSTER_NAME="${USER}.k8s"
 
 function help_menu () {
 cat << EOF
 Usage: ${0}
 
 OPTIONS:
+
    -h|--help             Show this message
 
    -d|--dns-zone         Kops DNS zone
 
    -s|--state-store      Kops state storage location
 
+   -cn|--cluster-name    Kops cluster name
 
 EXAMPLES:
    cleanup_k8s.sh --dns-zone "gamename.me" --state-store "s3://gamename-kubernetes"
