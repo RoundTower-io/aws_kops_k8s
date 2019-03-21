@@ -1,14 +1,12 @@
 #!/usr/bin/env bash
 
 # Defaults
-#KOPS_DNS_ZONE=""
-#KOPS_STATE_STORE=""
 KOPS_AWS_REGION=us-east-2
 KOPS_MASTER_COUNT=1
 KOPS_NODE_COUNT=3
 KOPS_NODE_SIZE="t2.small"
 KOPS_MASTER_SIZE="t2.micro"
-KOPS_CLUSTER_NAME="tennisk8s"
+KOPS_CLUSTER_NAME="${USER}.k8s"
 
 function help_menu () {
 cat << EOF
